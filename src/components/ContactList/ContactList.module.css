@@ -1,0 +1,51 @@
+/* Stylizacja całej listy kontaktów */
+.div {
+    margin-top: 20px;
+}
+
+/* Stylizacja tabeli */
+.table {
+
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+/* Stylizacja nagłówka tabeli */
+.theader {
+    background-color: #f5f5f5;
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Stylizacja komórek tabeli */
+.tbody {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Stylizacja przycisku usuwania */
+.button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Efekt hover na przycisku */
+.button:hover {
+    background-color: #c82333;
+}
+
+.message {
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 15px 0 15px 0;
+}
