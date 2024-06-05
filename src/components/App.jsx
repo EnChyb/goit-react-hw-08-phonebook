@@ -1,10 +1,10 @@
-import { ContactForm } from "./ContactForm/ContactForm";
-import { ContactList } from "./ContactList/ContactList";
-import { Filter } from "./Filter/Filter";
-import { useDispatch, useSelector } from 'react-redux';
+// import { ContactForm } from "./ContactForm/ContactForm";
+// import { ContactList } from "./ContactList/ContactList";
+// import { Filter } from "./Filter/Filter";
+import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { selectError, selectIsLoading } from '../redux/contacts/selectors';
-import { Loader } from './Loader/Loader';
+// import { selectError, selectIsLoading } from '../redux/contacts/selectors';
+// import { Loader } from './Loader/Loader';
 import { Routes, Route } from 'react-router-dom';
 import { useAuth } from "hooks/useAuth";
 import { refreshUser } from "../redux/auth/operations";
@@ -19,8 +19,8 @@ import { Contacts } from "pages/Contacts/Contacts";
 export const App = () => {
   const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
-  const isLoading = useSelector(selectIsLoading);
-  const error = useSelector(selectError);
+  // const isLoading = useSelector(selectIsLoading);
+  // const error = useSelector(selectError);
 
 
   useEffect(() => {
