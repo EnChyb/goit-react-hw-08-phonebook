@@ -5,6 +5,13 @@
     max-width: 400px;
     margin: 0 auto;
 }
+.component {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 15px 0 15px 0;
+}
 
 /* Stylizacja etykiet (label) */
 .label {

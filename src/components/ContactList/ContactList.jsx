@@ -1,7 +1,8 @@
 import css from './ContactList.module.css'
 import { useDispatch, useSelector } from 'react-redux';
-import { selectContacts, selectFilter } from '../../redux/selectors';
-import { deleteContact } from '../../redux/operations';
+import { selectContacts} from '../../redux/contacts/selectors';
+import { selectFilter } from '../../redux/filter/selectors';
+import { deleteContact } from '../../redux/contacts/operations';
 
 export const ContactList = () => {
     const dispatch = useDispatch();
@@ -13,6 +14,7 @@ export const ContactList = () => {
 
     return (
         <div className={css.div}>
+            <h2 className={css.component}>Contacts</h2>
             {filteredUserData.length > 0 ?
                 (
                     <table className={css.table}>

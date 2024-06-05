@@ -3,6 +3,14 @@
     margin-top: 20px;
 }
 
+.component {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 15px 0 15px 0;
+}
+
 /* Stylizacja tabeli */
 .table {
 
