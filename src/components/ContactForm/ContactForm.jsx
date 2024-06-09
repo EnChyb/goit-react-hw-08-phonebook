@@ -1,13 +1,15 @@
-import { nanoid } from 'nanoid';
+// import { nanoid } from 'nanoid';
 import css from './ContactForm.module.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from "../../redux/contacts/selectors";
 import { addContact } from '../../redux/contacts/operations';
+import toast from 'react-hot-toast';
 
 
 export const ContactForm = () => {
     const dispatch = useDispatch();
     const contacts = useSelector(selectContacts);
+    const notify = (message) => toast(message);
 
     const resetForm = () => {
         document.getElementById("nameId").value = '';
@@ -20,7 +22,7 @@ export const ContactForm = () => {
     const onSubmit = (e) => {
         e.preventDefault();
         const name = e.target.elements.name.value;
-        const phone = e.target.elements.number.value;
+        const number = e.target.elements.number.value;
 
         // Do not add duplicated contact
         const duplicatedContact = contacts.some(
@@ -28,13 +30,13 @@ export const ContactForm = () => {
         );
 
         if (duplicatedContact) {
-            alert(`${name} is already in contacts.`);
+            notify(`${name} is already in contacts.`);
             resetForm();
         return;
         }
 
         //Add new contact 
-        const newContact = { id: nanoid(), name, phone };
+        const newContact = { name, number };
         dispatch(addContact(newContact));
         resetForm();
 
