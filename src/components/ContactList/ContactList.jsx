@@ -29,7 +29,7 @@ export const ContactList = () => {
                             {filteredUserData.map((contact) => (
                                 <tr key={contact.id}>
                                     <td>{contact.name}</td>
-                                    <td>{contact.phone}</td>
+                                    <td>{contact.number}</td>
                                     <td><button className={css.button} onClick={() => dispatch(deleteContact(contact.id))}>Delete</button></td>
                                 </tr>
                             ))
